@@ -1,6 +1,7 @@
 import { View, Text, TouchableOpacity, Alert } from 'react-native'
 import React from 'react'
 import CalculatorApp from './src/Calcuator/CalculatorApp';
+import Counter from './src/counter/Counter';
 
 const App = () => {
   const handlePress = () => {
@@ -10,7 +11,9 @@ const App = () => {
   return (
     <View>
      
-      <CalculatorApp />
+      {/* <CalculatorApp /> */}
+      <Counter />
+     
 
      
     </View>
