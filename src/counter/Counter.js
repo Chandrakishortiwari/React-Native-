@@ -1,9 +1,17 @@
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text, TouchableOpacity, TextInput } from 'react-native'
 import React, { useState } from 'react'
 
 
 const Counter = () => {
     const [counter, setcounter] = useState(0);
+   const [input, setinput] = useState('');
+   const [getinputvalue, setgetinputvalue] = useState('');
+
+   const setdata =()=>{
+    setgetinputvalue(input);
+    setinput('');
+   }
+
     const incremment = ()=>{
         setcounter(counter + 1);
     }
@@ -25,7 +33,11 @@ const Counter = () => {
     <Text onPress={decremment} style={{textAlign:'center', textAlignVertical:'center',fontSize:25,}}>Add counter</Text>
     </TouchableOpacity>
 
-
+   <TextInput placeholder='entent uour name' onChangeText={(Text)=>setinput(Text)}  />
+    <Text>{getinputvalue}</Text>
+    <TouchableOpacity onPress={setdata}>
+      <Text>grt inputvalue</Text>
+    </TouchableOpacity>
 
     {/* learn props in react-native
     <User counter={counter} setcounter={setcounter} /> */}
