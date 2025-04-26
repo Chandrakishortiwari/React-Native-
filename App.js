@@ -4,6 +4,7 @@ import CalculatorApp from './src/Calcuator/CalculatorApp';
 import Counter from './src/counter/Counter';
 import GetinputValue from './src/getainputvalue/GetinputValue';
 import CreateForm from './src/form/CreateForm';
+import ModalBox from './src/modal/ModalBox';
 
 const App = () => {
   const handlePress = () => {
@@ -11,12 +12,13 @@ const App = () => {
   };
 
   return (
-    <View>
+    <View style={{flex:1,}}>
      
       {/* <CalculatorApp /> */}
       {/* <Counter /> */}
       {/* <GetinputValue /> */}
-      <CreateForm />
+      {/* <CreateForm /> */}
+      <ModalBox />
      
 
      
